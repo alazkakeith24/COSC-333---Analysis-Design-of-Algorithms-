@@ -1,4 +1,4 @@
-# EB3/67307/23-KEITH KIPCHUMBA-COSC-333---Analysis-Design-of-Algorithms-
+# COSC-333---Analysis-Design-of-Algorithms-
 
 # Recursive Factorial and Fibonacci Program
 
