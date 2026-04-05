@@ -1,29 +1,36 @@
-# COSC-333---Analysis-Design-of-Algorithms-
+//## C++ Implementation
+#include <iostream>
+using namespace std;
 
-# Recursive Factorial and Fibonacci Program
+// Recursive function to calculate factorial
+int factorial(int n) {
+    if (n == 0 || n == 1)
+        return 1;
+    else
+        return n * factorial(n - 1);
+}
 
-## Name
-Keith Kipchumba
+// Recursive function to calculate Fibonacci
+int fibonacci(int n) {
+    if (n == 0)
+        return 0;
+    else if (n == 1)
+        return 1;
+    else
+        return fibonacci(n - 1) + fibonacci(n - 2);
+}
 
-## Registration Number
-EB3/67307/23
+int main() {
+    int num;
+    cout << "Enter a number: ";
+    cin >> num;
 
-## Description of the Algorithm
-This program uses recursion to compute:
-1. Factorial of a number
-2. Fibonacci sequence
+    cout << "Factorial of " << num << " = " << factorial(num) << endl;
 
-- Factorial is calculated using:
-  n! = n × (n-1)!
-- Fibonacci is calculated using:
-  F(n) = F(n-1) + F(n-2)
+    cout << "Fibonacci sequence up to " << num << " terms: ";
+    for (int i = 0; i < num; i++) {
+        cout << fibonacci(i) << " ";
+    }
 
-Both functions use base cases to stop recursion.
-
-## Discussion of Results
-- The factorial function works efficiently for small values.
-- The Fibonacci function works correctly but becomes slow for large inputs due to repeated calculations.
-- Recursion simplifies code but may increase time complexity.
-
-## Conclusion
-The program demonstrates how recursion can be used to solve mathematical problems effectively.
+    return 0;
+}
